@@ -1,0 +1,18 @@
+node_modules/
+build/*
+yarn.lock
+package-lock.json
+types/
+coverage/
+coverage.json
+typechain/
+node_modules
+deployments
+.env
+yarn-error.log
+.vscode
+.DS_Store
+
+#Hardhat files
+cache
+artifacts
