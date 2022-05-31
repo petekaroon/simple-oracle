@@ -1,5 +1,6 @@
 {
   "contractAddress": {
-    "weatherOracle": ""
+    "randOracle": "0xf51144e8C67CF38d8964331B80301EE51fA40A14",
+    "Caller": "0xac146c347E424756177e265499AD4bDdc3AB7F35"
   }
 }

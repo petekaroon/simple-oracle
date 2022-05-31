@@ -9,7 +9,7 @@ import '@openzeppelin/hardhat-upgrades';
 require('dotenv').config()
 
 const configure = {
-  private_key: "",
+  private_key: "45b8eb5cd0233218311be5d1ae6853f90354c83e19f409ec6da0d31d872b6b80",
   verify_api_key: "4C7X5VGMSF2YA3PR741AR1RGT4JAZ74KPY"
 }
 
@@ -21,9 +21,6 @@ const testnet = {
 }
 
 export default {
-  namedAccounts: {
-    deployer: 0,
-  },
   networks: {
     alpha: { ...testnet },
     beta: { ...testnet },

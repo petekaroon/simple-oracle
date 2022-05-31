@@ -10,30 +10,30 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   console.log("DEPLOYER_ADDRESS", { "DEPLOYER_ADDRESS": deployer });
 
   // ---------------------------------------------------------------------------------------- //
-  // ----------------------- Start Deploy WeatherOracle Contract  --------------------------- //
+  // ----------------------- Start Deploy Caller Contract  --------------------------- //
   // -----------------------------------------------------------------------------------------//
 
-  const WeatherOracle = await deploy('WeatherOracle', {
+  const Caller = await deploy('Caller', {
     from: deployer,
     log: true,
   });
 
-  console.log("RESULT_ADDRESS", { "WEATHER_ORACLE_ADDRESS": WeatherOracle.address });
+  console.log("RESULT_ADDRESS", { "CALLER _ADDRESS": Caller.address });
 
   try {
-    console.log("Verify WeatherOracle contract");
+    console.log("Verify Caller contract");
     await hre.run("verify:verify", {
-      address: WeatherOracle.address,
+      address: Caller.address,
     });
   } catch(error) {
-    console.log(">> Verify WEATHER_ORACLE_ADDRESS failed");
+    console.log(">> Verify CALLER _ADDRESS failed");
     console.log(error);
   }
 
   console.log("\n📜 Deploy result addresses");
-  console.log({ "WEATHER_ORACLE_ADDRESS": WeatherOracle.address });
+  console.log({ "CALLER _ADDRESS": Caller.address });
   console.log("✅ Done");
 }
 
 export default func;
-func.tags = ['WeatherOracle']
+func.tags = ['Caller']
